@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
+# Ignorar todas las carpetas __pycache__ en cualquier parte del proyecto
+__pycache__/
+*.pyc
 
 # C extensions
 *.so
