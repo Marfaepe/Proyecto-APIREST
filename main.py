@@ -1,5 +1,6 @@
 from fastapi import FastAPI #importamos fastapi
 from routers import products, users
+from fastapi.staticfiles import StaticFiles
 #import FastApi.routers.users as users
 
 app = FastAPI() #intanciamos fastaspi
@@ -7,6 +8,7 @@ app = FastAPI() #intanciamos fastaspi
 #Routers
 app.include_router(products.router)
 app.include_router(users.router)
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 #inicializa el servce: uvicorn main:app --reload
 
